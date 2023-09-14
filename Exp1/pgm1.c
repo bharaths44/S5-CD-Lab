@@ -53,23 +53,23 @@ int main() {
         
         while (tok != NULL) {
             if (isOperator(tok)) {
-                printf("%s is an operator on line %d.\n", tok, line);
+                printf("%s \t operator \t\t Line %d\n", tok, line);
             } 
             
             else if (isPunctuation(tok)) {
-                printf("%s is a punctuation symbol on line %d.\n", tok, line);
+                printf("%s \t punctuation symbol \t Line %d\n", tok, line);
             } 
             
             else if (isIdentifier(tok)) {
-                printf("%s is an identifier on line %d.\n", tok, line);
+                printf("%s \t identifier \t\t Line %d\n", tok, line);
             } 
             
             else if (isConstant(tok)) {
-                printf("%s is a constant on line %d.\n", tok, line);
+                printf("%s \t constant \t\t Line %d\n", tok, line);
             } 
             
             else {
-                printf("%s is an unknown token on line %d.\n", tok, line);
+                printf("%s \t unknown token \t Line %d\n", tok, line);
             }
             
             tok = strtok(NULL, " \t\n");
