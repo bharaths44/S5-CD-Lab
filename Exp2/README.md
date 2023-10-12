@@ -35,3 +35,14 @@ OUTPUT :
     )        Closing Brackets          4
     ;        Semicolon                 4
     }        Closing Brackets          5
+
+### Commands used
+```shell
+ lex pgm2.l
+```
+```shell
+gcc lex.yy.c -o pgm2 -lfl
+```
+```shell
+./pgm2 < input_2.txt
+```
