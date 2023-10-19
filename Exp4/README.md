@@ -1,7 +1,9 @@
 ## Experiment 4
 
-* 1. Implementation of Lexical Analyzer using LEX Tool to eliminate white space and comments. (Input source code can read from a file).
-##Expected Result
+1. Implementation of Lexical Analyzer using LEX Tool to eliminate white space and comments. (Input source code can read from a file).
+   
+Expected Result
+
 INPUT :
 ```C
 #include<stdio.h>
@@ -19,9 +21,9 @@ voidmain()
 } 
 ```
 
-* Implementation of Lexical Analyzer using LEX Tool to ignore redundant spaces, tabs
-and new lines. (Input source code can read from a file).
-## Expected Result
+2. Implementation of Lexical Analyzer using LEX Tool to ignore redundant spaces, tabs and new lines. (Input source code can read from a file).
+
+ Expected Result
 
 INPUT :
 ```C
