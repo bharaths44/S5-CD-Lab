@@ -1,21 +1,25 @@
 #include <stdio.h>
 
 int main() {
+	//Reading states
     printf("Enter the number of states: ");
     int states;
     scanf("%d", &states);
 
+	//Reading input symbols
     printf("Enter the number of input symbols: ");
     int nip;
     scanf("%d", &nip);
+    
+    //Reading symbols
     char symbols[nip];
-
     printf("\n\nEnter input symbols\n");
     for (int i = 0; i < nip; i++) {
         printf("Enter input symbol %d: ", i + 1);
         scanf(" %c", &symbols[i]); // Notice the space before %c to consume the newline character
     }
 
+	//Creating transition table
     printf("Enter transition details:\n");
     int trans[states][nip];
     for (int i = 0; i < states; i++) {
@@ -25,6 +29,7 @@ int main() {
         }
     }
 
+	//Reading final states
     printf("\n\nEnter the number of final states: ");
     int nfinal;
     scanf("%d", &nfinal);
@@ -36,10 +41,12 @@ int main() {
         scanf("%d", &final[i]);
     }
 
+	//Reading input string
     char str[15];
     printf("Enter input string: ");
     scanf("%s", str);
 
+	//Simulation of DFA
     int ip = 0, state = 0, ip_index;
     char ch = str[0];
 	printf("\n\n");
@@ -80,4 +87,3 @@ int main() {
 
     return 0;
 }
-
