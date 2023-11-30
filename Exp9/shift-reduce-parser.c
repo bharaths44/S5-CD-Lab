@@ -78,17 +78,21 @@ int main()
         // Check if the stack contains only the start symbol and if the entire input string has been processed
         if (strcmp(stack, rules[0].left) == 0 && i == strlen(input))
         {
-            printf("\nAccepted");
+            printf("\nAccepted\n");
             break;
         }
 
         // Check if the entire input string has been processed but the stack doesn't match the start symbol
         if (i == strlen(input))
         {
-            printf("\nNot Accepted");
+            printf("\nNot Accepted\n");
             break;
         }
     }
 
     return 0;
 }
+
+//E->E+T | T
+//T->T*F | F
+//F->id
