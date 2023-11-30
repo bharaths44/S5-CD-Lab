@@ -136,4 +136,10 @@ int F(const char* F_rule) {
         return FAILED;
 }
 
+/*Enter production rule for E: TE`
+Enter production rule for E': +TE`|$
+Enter production rule for T: FT`
+Enter production rule for T': *FT`|$
+Enter production rule for F: (E)|i
+*/
 
