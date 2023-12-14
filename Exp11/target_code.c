@@ -28,7 +28,9 @@ void generateTargetCode(ThreeAddressCode *code, int numInstructions) {
         } else if (instruction.op == '*') {
             printf("MUL %s, %s, %s\n", instruction.result, instruction.arg1, instruction.arg2);
         }
-        // Add more cases for other operations as needed
+        else if (instruction.op == '/') {
+            printf("DIV %s, %s, %s\n", instruction.result, instruction.arg1, instruction.arg2);
+        } 
     }
 }
 
@@ -38,15 +40,24 @@ int main() {
     // Get the number of instructions from the user
     printf("Enter the number of 3-address code instructions: ");
     scanf("%d", &numInstructions);
-
+	getchar();
     // Allocate memory for the array of 3-address code instructions
     ThreeAddressCode *code = (ThreeAddressCode *)malloc(numInstructions * sizeof(ThreeAddressCode));
 
-	printf("Enter the instructions ( '_' for empty operands)");
+	printf("Enter the instructions ( '_' for empty operands)\n");
     // Get 3-address code instructions from the user
     for (int i = 0; i < numInstructions; i++) {
-        printf("Enter for instruction %d : ", i + 1);
-        scanf("%c %s %s %s", &code[i].op, code[i].arg1, code[i].arg2, code[i].result);
+        printf("Enter for instruction %d\n", i + 1);
+        printf("Enter operator : ");
+        scanf("%c",&code[i].op);
+        printf("Enter arg1 :");
+        scanf("%s",code[i].arg1);
+        printf("Enter arg2 :");
+        scanf("%s",code[i].arg2);
+        printf("Enter result variable :");
+        scanf("%s",code[i].result);
+        getchar();
+        printf("\n\n");
     }
 
     // Generate target code
