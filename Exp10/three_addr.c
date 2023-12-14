@@ -1,220 +1,59 @@
 #include<stdio.h>
 
-
-
 #include<string.h>
 
-int i=1,j=0,no=0,tmpch=90;
-
-char str[100],left[15],right[15];
-
-void findopr();
-
-void explore();
-
-void fleft(int);
-
-void fright(int);
-
-struct exp
-
-{
-
-int pos;
-
-char op;
-
-}k[15];
-
-void main()
-
-{
-
-printf("\t\tINTERMEDIATE CODE GENERATION\n\n");
-
-printf("Enter the Expression :");
-
-scanf("%s",str);
-
-printf("The intermediate code:\n");
-
-findopr();
-
-explore();
-
-}
-
-void findopr()
-
-{
-
-for(i=0;str[i]!='\0';i++)
-
-if(str[i]==':')
-
-{
-
-k[j].pos=i;
-
-k[j++].op=':';
-
-}
-
-for(i=0;str[i]!='\0';i++)
-
-if(str[i]=='/')
-
-{
-
-k[j].pos=i;
-
-k[j++].op='/';
-
-}
-
-for(i=0;str[i]!='\0';i++)
-
-if(str[i]=='*')
-
-{
-
-k[j].pos=i;
-
-k[j++].op='*';
-
-}
-
-for(i=0;str[i]!='\0';i++)
-
-if(str[i]=='+')
-
-{
-
-k[j].pos=i;
-
-k[j++].op='+';
-
-}
-
-for(i=0;str[i]!='\0';i++)
-
-if(str[i]=='-')
-
-{
-
-k[j].pos=i;
-
-k[j++].op='-';
-
-}
-
-}
-
-void explore()
-
-{
-
-i=1;
-
-while(k[i].op!='\0')
-
-{
-
-fleft(k[i].pos);
-
-fright(k[i].pos);
-
-str[k[i].pos]=tmpch--;
-
-printf("\t%c := %s%c%s\t\t",str[k[i].pos],left,k[i].op,right);
-
-printf("\n");
-
-i++;
-
-}
-
-fright(-1);
-
-if(no==0)
-
-{
-
-fleft(strlen(str));
-
-printf("\t%s := %s",right,left);
-
-
-exit(0);
-
-}
-
-printf("\t%s := %c",right,str[k[--i].pos]);
-
-
-
-}
-
-void fleft(int x)
-
-{
-
-int w=0,flag=0;
-
-x--;
-
-while(x!= -1 &&str[x]!= '+' &&str[x]!='*'&&str[x]!='='&&str[x]!='\0'&&str[x]!='-'&&str[x]!='/'&&str[x]!=':')
-
-{
-
-if(str[x]!='$'&& flag==0)
-
-{
-
-left[w++]=str[x];
-
-left[w]='\0';
-
-str[x]='$';
-
-flag=1;
-
-}
-
-x--;
-
-}
-
-}
-
-void fright(int x)
-
-{
-
-int w=0,flag=0;
-
-x++;
-
-while(x!= -1 && str[x]!= '+'&&str[x]!='*'&&str[x]!='\0'&&str[x]!='='&&str[x]!=':'&&str[x]!='-'&&str[x]!='/')
-
-{
-
-if(str[x]!='$'&& flag==0)
-
-{
-
-right[w++]=str[x];
-
-right[w]='\0';
-
-str[x]='$';
-
-flag=1;
-
-}
-
-x++;
-
-}
+void main() {
+
+    char line[20];
+    int s[20];
+    int t = 1;
+
+    int i = 0;
+    printf("Enter string  :");
+    gets(line);
+    for (i = 0; i < 20; i++) s[i] = 0;
+    printf("Op\tArg1\tArg2\tResult\n");
+    printf("----------------------------\n");
+    for (i = 2; line[i] != '\0'; i++) {
+        if (line[i] == '/' || line[i] == '*') {
+          
+            if (s[i] == 0) {
+                if (s[i + 1] == 0) {
+                    printf("=\t%c\t\t t%d\n", line[i + 1], t);
+                    s[i + 1] = t++;
+                     printf("----------------------------\n");
+                }
+                printf("%c\t", line[i]);
+                (s[i - 1] == 0) ? printf("%c\t", line[i - 1]): printf("t%d\t", s[i - 1]);
+                printf("t%d \t t%d", s[i + 1], t);
+                printf("\n----------------------------\n");
+                s[i - 1] = s[i + 1] = t++;
+                s[i] = 1;
+            }
+        }
+      
+    }
+
+    for (i = 2; line[i] != '\0'; i++) {
+        if (line[i] == '+' || line[i] == '-') {
+           
+            if (s[i] == 0) {
+                if (s[i + 1] == 0) {
+                    printf("=\t%c\t\t t%d\n", line[i + 1], t);
+                     printf("----------------------------\n");
+                    s[i + 1] = t++;
+                }
+                printf("%c\t", line[i]);
+                (s[i - 1] == 0) ? printf("%c\t", line[i - 1]): printf("t%d\t", s[i - 1]);
+                printf("t%d \t t%d", s[i + 1], t);
+                 printf("\n----------------------------\n");
+                s[i - 1] = s[i + 1] = t++;
+                s[i] = 1;
+            }
+        }
+       ;
+    }
+    printf("\n=\tt%d\t\t%c", t - 1, line[0]);
+    printf("\n");
 
 }
