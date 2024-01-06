@@ -1,10 +1,11 @@
 ## Experiment 4
 
 1. Implementation of Lexical Analyzer using LEX Tool to eliminate white space and comments. (Input source code can read from a file).
-   
+
 Expected Result
 
 INPUT :
+
 ```C
 #include<stdio.h>
 void main()
@@ -14,6 +15,7 @@ void main()
 ```
 
 OUTPUT :
+
 ```C
 #include<stdio.h>
 voidmain()
@@ -26,6 +28,7 @@ voidmain()
  Expected Result
 
 INPUT :
+
 ```C
 #include<stdio.h>
 void main() 
@@ -34,37 +37,41 @@ printf("hello");
 }
 ```
 
-OUTPUT : 
+OUTPUT :
 
-    LEXEME   TOKEN                 LINE NUMBER
-    \#       Special Symbols           1
-    include  Identifier                1
-    <        Relational Operators      1
-    stdio    Identifier                1
-    .        Special Symbols           1
-    h        Identifier                1
-    >        Relational Operators      1
-    void     Keyword                   2
-    main     Identifier                2
-    (        Opening Brackets          2
-    )        Closing Brackets          2
-    {        Opening Brackets          3
-    printf   Keyword                   4
-    (        Opening Brackets          4
-    "        Double Quotes             4
-    hello    string                    4
-    "        Double Quotes             4
-    )        Closing Brackets          4
-    ;        Semicolon                 4
-    }        Closing Brackets          5
-    
+    LEXEME   		TOKEN                 LINE NUMBER
+
+    #       		Special Symbols           	1
+    include  	Identifier                		1
+    <        		Relational Operators      	1
+    stdio    	Identifier                		1
+    .        		Special Symbols             1
+    h        		Identifier                		1
+    >       	 	Relational Operators      	1
+    void     	Keyword                   	2
+    main     	Identifier                		2
+    (        		Opening Brackets          	2
+    )        		Closing Brackets          	2
+    {        		Opening Brackets          	3
+    printf   		Keyword                   	4
+    (        		Opening Brackets          	4
+    "        		Double Quotes             	4
+    hello    	string                    		4
+    "        		Double Quotes             	4
+    )        		Closing Brackets          	4
+    ;        		Semicolon                	4
+    }        		Closing Brackets          	5
+
 ### Commands used
+
 ```shell
  lex pgm.l
 ```
+
 ```shell
 gcc lex.yy.c -o pgm -lfl
 ```
+
 ```shell
 ./pgm < input.txt
 ```

@@ -11,13 +11,13 @@ typedef struct
 
 void printTableHeader()
 {
-    printf("| %-15s | %-15s | %-15s |\n", "Lexeme", "Token", "Line Number");
-    printf("|-----------------|-----------------|-----------------|\n");
+    printf("| %-17s | %-17s | %-17s |\n", "Lexeme", "Token", "Line Number");
+    printf("|-------------------|-------------------|-------------------|\n");
 }
 
 void printToken(Token token)
 {
-    printf("| %-15s | %-15s | %-15d |\n", token.value, token.type, token.lineNumber);
+    printf("| %-17s | %-17s | %-17d |\n", token.value, token.type, token.lineNumber);
 }
 
 int isOperator(char c)

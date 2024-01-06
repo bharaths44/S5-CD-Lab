@@ -10,6 +10,7 @@ int main()
 {
 	printf("Enter string:\n");
 	yylex();
+	return 0;
 
 }
 
