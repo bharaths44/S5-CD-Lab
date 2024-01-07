@@ -1,0 +1,98 @@
+Date : 2024-01-06 21:16:26
+Directory : /Users/bharaths/Downloads/S5-CD-Lab
+Total : 49 files,  12953 codes, 4024 comments, 3587 blanks, all 20564 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C        |         21 |     12,519 |      3,915 |      3,458 |     19,892 |
+| Lex      |         10 |        161 |         10 |         37 |        208 |
+| Markdown |         12 |        113 |          0 |         33 |        146 |
+| YACC     |          3 |         82 |          0 |         29 |        111 |
+| C++      |          3 |         78 |         99 |         30 |        207 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                 |         49 |     12,953 |      4,024 |      3,587 |     20,564 |
+| . (Files)                                                         |          1 |          3 |          0 |          3 |          6 |
+| Exp01                                                             |          4 |      1,207 |        378 |        345 |      1,930 |
+| Exp02                                                             |          8 |      3,333 |      1,082 |        994 |      5,409 |
+| Exp02 (Files)                                                     |          1 |         15 |          0 |          2 |         17 |
+| Exp02/count                                                       |          2 |      1,101 |        361 |        329 |      1,791 |
+| Exp02/keywords                                                    |          2 |      1,104 |        360 |        331 |      1,795 |
+| Exp02/uppercase                                                   |          1 |         17 |          0 |          4 |         21 |
+| Exp02/vowels                                                      |          2 |      1,096 |        361 |        328 |      1,785 |
+| Exp03                                                             |         16 |      6,341 |      2,079 |      1,733 |     10,153 |
+| Exp03 (Files)                                                     |          1 |         18 |          0 |          2 |         20 |
+| Exp03/calc                                                        |          5 |      2,124 |        693 |        576 |      3,393 |
+| Exp03/check_expr                                                  |          5 |      2,135 |        693 |        581 |      3,409 |
+| Exp03/variable_name                                               |          5 |      2,064 |        693 |        574 |      3,331 |
+| Exp04                                                             |          4 |      1,226 |        371 |        349 |      1,946 |
+| Exp05                                                             |          4 |        276 |         31 |         57 |        364 |
+| Exp06                                                             |          2 |        214 |         43 |         34 |        291 |
+| Exp07                                                             |          2 |         54 |          5 |         17 |         76 |
+| Exp08                                                             |          2 |        118 |         14 |         17 |        149 |
+| Exp09                                                             |          2 |         77 |         12 |         13 |        102 |
+| Exp10                                                             |          2 |         52 |          0 |         11 |         63 |
+| Exp11                                                             |          2 |         52 |          9 |         14 |         75 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                          | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp01/README.md               | Markdown |          2 |          0 |          1 |          3 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp01/lex.yy.c                | C        |      1,099 |        365 |        323 |      1,787 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp01/pgm1.c                  | C        |         90 |         13 |         18 |        121 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp01/pgm1.l                  | Lex      |         16 |          0 |          3 |         19 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/README.md               | Markdown |         15 |          0 |          2 |         17 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/count/lex.yy.c          | C        |      1,082 |        361 |        325 |      1,768 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/count/pgm2.4.l          | Lex      |         19 |          0 |          4 |         23 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/keywords/lex.yy.c       | C        |      1,086 |        360 |        326 |      1,772 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/keywords/pgm2.1.l       | Lex      |         18 |          0 |          5 |         23 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/uppercase/pgm2.2.l      | Lex      |         17 |          0 |          4 |         21 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/vowels/lex.yy.c         | C        |      1,077 |        361 |        324 |      1,762 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp02/vowels/pgm2.3.l         | Lex      |         19 |          0 |          4 |         23 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/README.md               | Markdown |         18 |          0 |          2 |         20 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/calc/evalexp.l          | Lex      |         10 |          0 |          1 |         11 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/calc/evalexp.y          | YACC     |         26 |          0 |          9 |         35 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/calc/lex.yy.c           | C        |      1,088 |        361 |        323 |      1,772 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/calc/y.tab.c            | C        |        974 |        299 |        233 |      1,506 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/calc/y.tab.h            | C++      |         26 |         33 |         10 |         69 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/check_expr/check_expr.l | Lex      |         18 |          0 |          6 |         24 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/check_expr/check_expr.y | YACC     |         29 |          0 |          9 |         38 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/check_expr/lex.yy.c     | C        |      1,088 |        361 |        323 |      1,772 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/check_expr/y.tab.c      | C        |        974 |        299 |        233 |      1,506 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/check_expr/y.tab.h      | C++      |         26 |         33 |         10 |         69 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/variable_name/lex.yy.c  | C        |      1,078 |        361 |        324 |      1,763 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/variable_name/var.l     | Lex      |         13 |          0 |          4 |         17 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/variable_name/var.y     | YACC     |         27 |          0 |         11 |         38 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/variable_name/y.tab.c   | C        |        920 |        299 |        225 |      1,444 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp03/variable_name/y.tab.h   | C++      |         26 |         33 |         10 |         69 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp04/README.md               | Markdown |         60 |          0 |         18 |         78 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp04/lex.yy.c                | C        |      1,135 |        361 |        325 |      1,821 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp04/pgm4-1.l                | Lex      |         16 |          0 |          4 |         20 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp04/pgm4-2.l                | Lex      |         15 |         10 |          2 |         27 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp05/README.md               | Markdown |          3 |          0 |          1 |          4 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp05/exp5.c                  | C        |         45 |          2 |         18 |         65 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp05/exp5S.c                 | C        |         69 |          7 |         14 |         90 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp05/nfatodfa.c              | C        |        159 |         22 |         24 |        205 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp06/README.md               | Markdown |          2 |          0 |          1 |          3 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp06/firstandfollow.c        | C        |        212 |         43 |         33 |        288 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp07/README.md               | Markdown |          2 |          0 |          1 |          3 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp07/pgm7.c                  | C        |         52 |          5 |         16 |         73 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp08/README.md               | Markdown |          2 |          0 |          1 |          3 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp08/pgm8.c                  | C        |        116 |         14 |         16 |        146 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp09/README.md               | Markdown |          2 |          0 |          1 |          3 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp09/shift-reduce-parser.c   | C        |         75 |         12 |         12 |         99 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp10/README.md               | Markdown |          2 |          0 |          1 |          3 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp10/three_addr.c            | C        |         50 |          0 |         10 |         60 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp11/README.md               | Markdown |          2 |          0 |          1 |          3 |
+| /Users/bharaths/Downloads/S5-CD-Lab/Exp11/target_code.c           | C        |         50 |          9 |         13 |         72 |
+| /Users/bharaths/Downloads/S5-CD-Lab/README.md                     | Markdown |          3 |          0 |          3 |          6 |
+| Total                                                             |          |     12,953 |      4,024 |      3,587 |     20,564 |
++-------------------------------------------------------------------+----------+------------+------------+------------+------------+

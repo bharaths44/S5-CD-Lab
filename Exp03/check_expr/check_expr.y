@@ -1,37 +1,51 @@
 %{
-	#include <stdio.h>
-	
-		
+#include <stdio.h>
+int yylex();
+void yyerror(const char* s);
 %}
 
-
-%token NUMBER ID
+%token NUMBER
 %left '+' '-'
 %left '*' '/'
 
-%% 
-E : T{
-		printf("Expression valid\n");
-		return 0;
-	 }
-
-T :	T '+' T 	{ $$ = $1 + $3; }
-	| T '-' T	{ $$ = $1 - $3; }
-	| T '*' T 	{ $$ = $1 * $3; }
-	| T '/' T 	{ $$ = $1 / $3; }
-	| '-' NUMBER { $$ = -$2; }
-	| '-' ID 	{ $$ = -$2; }
-	| '(' T ')' { $$ = $2; }
-	| NUMBER 	{ $$ = $1; }
-	| ID 		{ $$ = $1; }
-	;
 %%
 
-int main() {
-	printf("Enter expression :");
-	yyparse();
+program: expression '\n' {
+    printf("Valid expression\n");
+}
+       | '\n'
+       ;
+
+expression: NUMBER
+          | expression '+' expression
+          | expression '-' expression
+          | expression '*' expression
+          | expression '/' expression
+          ;
+
+%%
+
+void yyerror(const char* s) {
+    printf("Invalid expression\n");
 }
 
-int yyerror(char* s) {
-	printf("\nExpression is invalid\n");
+int main() {
+	printf("Enter an expression: ");
+    yyparse();
+    return 0;
 }
+
+int yylex() {
+    int c = getchar();
+    if (c == EOF) return 0;
+    if (c == '+' || c == '-' || c == '*' || c == '/') {
+        return c;
+    }
+    if (c >= '0' && c <= '9') {
+        ungetc(c, stdin);
+        scanf("%d", &yylval);
+        return NUMBER;
+    }
+    return c;
+}
+
