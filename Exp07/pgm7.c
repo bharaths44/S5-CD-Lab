@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
+int main()
+{
     char input[100];
     int flag = 0;
-    
+
     printf("Enter a string: ");
     fgets(input, sizeof(input), stdin);
 
@@ -15,25 +16,30 @@ int main() {
     int i = 0;
 
     // Check for an empty string
-    if (len == 0) {
+    if (len == 0)
+    {
         printf("String recognized under 'a*'\n");
         flag = 1;
     }
 
     // Check for 'a*'
-    for (i = 0; i < len; i++) {
-        if (input[i] != 'a') {
+    for (i = 0; i < len; i++)
+    {
+        if (input[i] != 'a')
+        {
             break;
         }
     }
 
-    if (i == len) {
+    if (i == len)
+    {
         printf("String recognized under 'a*'\n");
         flag = 1;
     }
 
     // Check for 'abb'
-    if (len == 3 && strcmp(input, "abb") == 0) {
+    if (len == 3 && strcmp(input, "abb") == 0)
+    {
         printf("String recognized under 'abb'\n");
         flag = 1;
     }
@@ -42,31 +48,40 @@ int main() {
     int hasA = 0, hasB = 0;
     int j;
 
-    for (j = 0; j < len; j++) {
-        if (input[j] == 'a') {
+    for (j = 0; j < len; j++)
+    {
+        if (input[j] == 'a')
+        {
             hasA = 1;
-        } else {
+        }
+        else
+        {
             break;
         }
     }
 
-    for (i = j; i < len; i++) {
-        if (input[i] == 'b') {
+    for (i = j; i < len; i++)
+    {
+        if (input[i] == 'b')
+        {
             hasB = 1;
-        } else {
+        }
+        else
+        {
             break;
         }
     }
 
-    if ((hasA || j == 0) && hasB && i == len) {
+    if ((hasA || j == 0) && hasB && i == len)
+    {
         printf("String recognized under 'a*b+'\n");
         flag = 1;
     }
 
-    if (flag != 1) {
+    if (flag != 1)
+    {
         printf("String not recognized under any pattern\n");
     }
 
     return 0;
 }
-

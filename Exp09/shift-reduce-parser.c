@@ -33,7 +33,7 @@ int main()
     // User input for the input string
     printf("\nEnter the input string: ");
     scanf("%s", input);
-	printf("Stack\tInput\tAction\n");
+    printf("Stack\tInput\tAction\n");
     i = 0;
     while (1)
     {
@@ -51,7 +51,7 @@ int main()
             }
             printf("\tShift %s\n", ch);
         }
-        
+
         // Iterate through the production rules
         for (j = 0; j < rule_count; j++)
         {
@@ -93,6 +93,6 @@ int main()
     return 0;
 }
 
-//E->E+T | T
-//T->T*F | F
-//F->id
+// E->E+T | T
+// T->T*F | F
+// F->id
