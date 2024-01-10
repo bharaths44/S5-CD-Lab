@@ -14,25 +14,35 @@ char nfa_table[10][10][10];
 // Transition table for the DFA
 char final_dfa[10][10][10];
 
-void main()
+int main()
 {
-    printf("Enter no. of states: ");
-    scanf("%d", &states);
+    // printf("Enter no. of states: ");
+    // scanf("%d", &states);
 
-    printf("Enter no. of input symbols: ");
-    scanf("%d", &inputs);
+    // printf("Enter no. of input symbols: ");
+    // scanf("%d", &inputs);
 
-    for (int i = 0; i < inputs; i++)
-    {
-        printf("Enter NFA matrix for input %d:\n", i + 1);
-        for (int j = 0; j < states; j++)
-        {
-            for (int k = 0; k < states; k++)
-            {
-                scanf("%d", &transitions[i][j][k]);
-            }
-        }
-    }
+    // for (int i = 0; i < inputs; i++)
+    // {
+    //     printf("Enter NFA matrix for input %d:\n", i + 1);
+    //     for (int j = 0; j < states; j++)
+    //     {
+    //         for (int k = 0; k < states; k++)
+    //         {
+    //             scanf("%d", &transitions[i][j][k]);
+    //         }
+    //     }
+    // }
+
+    states = 3;
+    inputs = 2;
+    int transitions[2][3][3] = {
+        {{1, 1, 0},
+         {0, 0, 0},
+         {0, 0, 0}},
+        {{1, 0, 0},
+         {0, 0, 1},
+         {0, 0, 0}}};
 
     // Create the transition table for the NFA
     char str[10];
@@ -70,6 +80,7 @@ void main()
     // Repeat until queue is empty
     while (strcmp(queue[front], "") != 0)
     {
+
         // Keeps track of new rows of DFA table when new states are added
         int temp_rows = rows;
         // Contains the new states that are found for an input symbol transition for each state
@@ -200,5 +211,5 @@ void main()
         }
         printf("\n");
     }
+    return 0;
 }
-

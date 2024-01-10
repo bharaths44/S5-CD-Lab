@@ -74,7 +74,6 @@ int main()
                 j = -1; // Restart the loop to ensure immediate reduction of the newly derived production rule
             }
         }
-
         // Check if the stack contains only the start symbol and if the entire input string has been processed
         if (strcmp(stack, rules[0].left) == 0 && i == strlen(input))
         {
@@ -95,4 +94,4 @@ int main()
 
 // E->E+T | T
 // T->T*F | F
-// F->id
+// F->i

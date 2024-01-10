@@ -16,6 +16,7 @@ int lineno = 1;
 ";"         { printf(";\t Semicolon\t\t Line %d\n", lineno); }
 [+/*=]      { printf("%s\t Operator\t\t Line %d\n", yytext, lineno); }
 \"[^\"\n]*\" { printf("%s\t String\t\t Line %d\n", yytext, lineno); }
+[ ] {}
 .           { printf("%s\t Special Symbols\t Line %d\n", yytext, lineno); }
 %%
 
