@@ -18,30 +18,31 @@ void generateTargetCode(ThreeAddressCode *code, int numInstructions)
     for (int i = 0; i < numInstructions; i++)
     {
         ThreeAddressCode instruction = code[i];
+        printf("MOV %s, R%d\n", instruction.arg1, i);
 
-        // Translate 3-address code to target code (assembly or machine code)
-        // This is a simple example, and you need to customize it based on the target architecture.
+        switch (instruction.op)
+        {
+        case '=':
+            printf("MOV R%d, %s\n", i, instruction.result);
+            break;
+        case '+':
+            printf("ADD %s, R%d\n", instruction.arg2, i);
+            break;
+        case '-':
+            printf("SUB %s, R%d\n", instruction.arg2, i);
+            break;
+        case '*':
+            printf("MUL %s, R%d\n", instruction.arg2, i);
+            break;
+        case '/':
+            printf("DIV %s, R%d\n", instruction.arg2, i);
+            break;
+        default:
+            printf("Unknown operation: %c\n", instruction.op);
+            break;
+        }
 
-        if (instruction.op == '=')
-        {
-            printf("MOV %s, %s\n", instruction.result, instruction.arg1);
-        }
-        else if (instruction.op == '+')
-        {
-            printf("ADD %s, %s, %s\n", instruction.result, instruction.arg1, instruction.arg2);
-        }
-        else if (instruction.op == '-')
-        {
-            printf("SUB %s, %s, %s\n", instruction.result, instruction.arg1, instruction.arg2);
-        }
-        else if (instruction.op == '*')
-        {
-            printf("MUL %s, %s, %s\n", instruction.result, instruction.arg1, instruction.arg2);
-        }
-        else if (instruction.op == '/')
-        {
-            printf("DIV %s, %s, %s\n", instruction.result, instruction.arg1, instruction.arg2);
-        }
+        printf("MOV R%d, %s\n", i, instruction.result);
     }
 }
 
@@ -54,7 +55,7 @@ int main()
     scanf("%d", &numInstructions);
     getchar();
     // Allocate memory for the array of 3-address code instructions
-    ThreeAddressCode *code = (ThreeAddressCode *)malloc(numInstructions * sizeof(ThreeAddressCode));
+    ThreeAddressCode code[numInstructions];
 
     printf("Enter the instructions ( '_' for empty operands)\n");
     // Get 3-address code instructions from the user
@@ -75,9 +76,6 @@ int main()
 
     // Generate target code
     generateTargetCode(code, numInstructions);
-
-    // Free the allocated memory
-    free(code);
 
     return 0;
 }
