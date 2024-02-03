@@ -10,7 +10,7 @@ struct ProductionRule
 int main()
 {
     char input[20], stack[50], temp[50], ch[2], *token1, *token2, *substring;
-    int i, j, stack_length, substring_length, stack_top, rule_count = 0;
+    int i, j, stack_top, rule_count = 0;
     struct ProductionRule rules[10];
 
     stack[0] = '\0';
@@ -60,9 +60,7 @@ int main()
             if (substring != NULL)
             {
                 // Replace the matched substring with the left-hand side of the production rule
-                stack_length = strlen(stack);
-                substring_length = strlen(substring);
-                stack_top = stack_length - substring_length;
+                stack_top = strlen(stack) - strlen(substring);
                 stack[stack_top] = '\0';
                 strcat(stack, rules[j].left);
                 printf("%s\t", stack);
