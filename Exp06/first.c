@@ -51,7 +51,7 @@ void addToFirstSet(char lhs, char symbol)
         }
     }
     // C
-    
+
     int currentCount = firstSets[index].count;
 
     firstSets[index].firstSet[currentCount] = symbol;
@@ -67,17 +67,17 @@ void findFirstSets()
             addToFirstSet(rules[i].lhs, rules[i].rhs[0]);
         }
     }
-    for (int i = 0; i < ruleCount; i++)
-    {
-        if (rules[i].rhs[0] == rules[i].lhs)
-        {
-            int index = getFirstSetIndex(rules[i].rhs[0]);
-            for (int j = 0; j < firstSets[index].count; j++)
-            {
-                addToFirstSet(rules[i].lhs, firstSets[index].firstSet[j]);
-            }
-        }
-    }
+    // for (int i = 0; i < ruleCount; i++)
+    // {
+    //     if (rules[i].rhs[0] == rules[i].lhs)
+    //     {
+    //         int index = getFirstSetIndex(rules[i].rhs[0]);
+    //         for (int j = 0; j < firstSets[index].count; j++)
+    //         {
+    //             addToFirstSet(rules[i].lhs, firstSets[index].firstSet[j]);
+    //         }
+    //     }
+    // }
 }
 
 void printFirstSets()

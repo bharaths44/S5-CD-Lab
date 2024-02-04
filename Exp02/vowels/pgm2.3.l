@@ -7,7 +7,8 @@ int cc = 0;
 %%
 [aeiouyAEIOU]   { vc++; }
 [^aeiouyAEIOU0-9\n] { cc++; }
-\n              { printf("%d vowels\n%d consonants\n", vc, cc); vc = 0; cc = 0; }
+\n              { printf("%d vowels\n%d consonants\n", vc, cc); vc = 0; cc = 0; 
+                    return 0;}
 %%
 
 int main()

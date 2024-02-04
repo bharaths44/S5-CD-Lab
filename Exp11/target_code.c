@@ -23,7 +23,7 @@ void generateTargetCode(ThreeAddressCode *code, int numInstructions)
         switch (instruction.op)
         {
         case '=':
-            printf("MOV R%d, %s\n", i, instruction.result);
+            // printf("MOV R%d, %s\n", i, instruction.result);
             break;
         case '+':
             printf("ADD %s, R%d\n", instruction.arg2, i);

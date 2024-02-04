@@ -733,14 +733,15 @@ case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
 #line 10 "pgm2.3.l"
-{ printf("%d vowels\n%d consonants\n", vc, cc); vc = 0; cc = 0; }
+{ printf("%d vowels\n%d consonants\n", vc, cc); vc = 0; cc = 0; 
+                    return 0;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 11 "pgm2.3.l"
+#line 12 "pgm2.3.l"
 ECHO;
 	YY_BREAK
-#line 743 "lex.yy.c"
+#line 744 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1745,7 +1746,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 11 "pgm2.3.l"
+#line 12 "pgm2.3.l"
 
 
 int main()

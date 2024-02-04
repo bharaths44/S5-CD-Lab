@@ -442,8 +442,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "count.l"
-#line 2 "count.l"
+#line 1 "pgm2.4.l"
+#line 2 "pgm2.4.l"
 	#include<stdio.h>
 	int v=0,c=0;
 #line 449 "lex.yy.c"
@@ -664,7 +664,7 @@ YY_DECL
 		}
 
 	{
-#line 5 "count.l"
+#line 5 "pgm2.4.l"
 
 #line 669 "lex.yy.c"
 
@@ -725,24 +725,24 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "count.l"
+#line 6 "pgm2.4.l"
 {v++;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 "count.l"
+#line 7 "pgm2.4.l"
 {c++;}
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 8 "count.l"
+#line 8 "pgm2.4.l"
 {printf("vowel=%d\n consonents=%d\n",v,c);
 						return 0;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 10 "count.l"
+#line 10 "pgm2.4.l"
 ECHO;
 	YY_BREAK
 #line 748 "lex.yy.c"
@@ -1750,7 +1750,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 10 "count.l"
+#line 10 "pgm2.4.l"
 
 
 int main()

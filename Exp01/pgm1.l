@@ -5,7 +5,7 @@
 %%
 [ \t\n]+    /* Ignore spaces, tabs, and newlines */
 "//".*      /* Skip single-line comments */
-"/[*][^*]*[*]+([^/*][^*]*[*]+)*[/]"   /* Skip multi-line comments */
+"/*"([^*]|[*][^/])*"*/"    /* Skip multi-line comments */
 .|\n        { printf("%s", yytext); } /* Print everything else */
 %%
 
