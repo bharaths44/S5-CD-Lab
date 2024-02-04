@@ -4,7 +4,8 @@ int yylex();
 void yyerror(const char* s);
 %}
 
-%token NUMBER
+%token NUMBER ID
+%right '='
 %left '+' '-'
 %left '*' '/'
 
@@ -12,15 +13,21 @@ void yyerror(const char* s);
 
 program: expression '\n' {
     printf("Valid expression\n");
+    return 0;
 }
        | '\n'
        ;
 
 expression: NUMBER
+          | ID
           | expression '+' expression
           | expression '-' expression
           | expression '*' expression
           | expression '/' expression
+          | ID '=' expression
+          | '-' NUMBER
+          | '-' ID
+          | '(' expression ')'
           ;
 
 %%
@@ -35,17 +42,5 @@ int main() {
     return 0;
 }
 
-int yylex() {
-    int c = getchar();
-    if (c == EOF) return 0;
-    if (c == '+' || c == '-' || c == '*' || c == '/') {
-        return c;
-    }
-    if (c >= '0' && c <= '9') {
-        ungetc(c, stdin);
-        scanf("%d", &yylval);
-        return NUMBER;
-    }
-    return c;
-}
+
 
