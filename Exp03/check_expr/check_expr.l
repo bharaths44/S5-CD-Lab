@@ -9,7 +9,7 @@ int yylval;
 
 [a-zA-Z]+ {yylval = (int)yytext[0]; return ID; }
 
-[\+\-\*/] { return yytext[0];}
+["+*-/"] { return yytext[0];}
 
 [ \t] ;  /* ignore whitespace */
 
